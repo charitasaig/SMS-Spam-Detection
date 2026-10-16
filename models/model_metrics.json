@@ -1,0 +1,179 @@
+{
+  "best_model_name": "Logistic Regression",
+  "selection_rationale": "Logistic Regression achieved a higher Spam F1-Score (94.21% vs 93.06%).",
+  "models": {
+    "naive_bayes": {
+      "model_name": "Multinomial Naive Bayes",
+      "accuracy": 0.9835,
+      "spam_precision": 0.9744,
+      "spam_recall": 0.8906,
+      "spam_f1": 0.9306,
+      "ham_precision": 0.9847,
+      "ham_recall": 0.9967,
+      "ham_f1": 0.9907,
+      "macro_f1": 0.9606,
+      "weighted_f1": 0.9832,
+      "roc_auc": 0.9915,
+      "confusion_matrix": {
+        "tn": 901,
+        "fp": 3,
+        "fn": 14,
+        "tp": 114,
+        "raw": [
+          [
+            901,
+            3
+          ],
+          [
+            14,
+            114
+          ]
+        ]
+      },
+      "report_dict": {
+        "ham": {
+          "precision": 0.9846994535519126,
+          "recall": 0.9966814159292036,
+          "f1-score": 0.9906542056074766,
+          "support": 904.0
+        },
+        "spam": {
+          "precision": 0.9743589743589743,
+          "recall": 0.890625,
+          "f1-score": 0.9306122448979591,
+          "support": 128.0
+        },
+        "accuracy": 0.9835271317829457,
+        "macro avg": {
+          "precision": 0.9795292139554435,
+          "recall": 0.9436532079646018,
+          "f1-score": 0.9606332252527179,
+          "support": 1032.0
+        },
+        "weighted avg": {
+          "precision": 0.9834169134969745,
+          "recall": 0.9835271317829457,
+          "f1-score": 0.9832071407132729,
+          "support": 1032.0
+        }
+      },
+      "report_text": "              precision    recall  f1-score   support\n\n         ham       0.98      1.00      0.99       904\n        spam       0.97      0.89      0.93       128\n\n    accuracy                           0.98      1032\n   macro avg       0.98      0.94      0.96      1032\nweighted avg       0.98      0.98      0.98      1032\n",
+      "pedagogical_insights": {
+        "false_positive_explanation": "A False Positive (FP=3) occurs when a legitimate message (HAM) is incorrectly classified as SPAM. In real-world SMS filtering, high FP is dangerous because users may miss critical two-factor authentication (2FA) OTP codes, banking alerts, flight notifications, or emergency personal messages.",
+        "false_negative_explanation": "A False Negative (FN=14) occurs when an unwanted or malicious message (SPAM) is mistakenly classified as legitimate (HAM). While less catastrophic than losing a genuine message, a high FN rate exposes the user to fraudulent phishing links, financial scams, and nuisance advertising."
+      }
+    },
+    "logistic_regression": {
+      "model_name": "Logistic Regression",
+      "accuracy": 0.9864,
+      "spam_precision": 1.0,
+      "spam_recall": 0.8906,
+      "spam_f1": 0.9421,
+      "ham_precision": 0.9847,
+      "ham_recall": 1.0,
+      "ham_f1": 0.9923,
+      "macro_f1": 0.9672,
+      "weighted_f1": 0.9861,
+      "roc_auc": 0.998,
+      "confusion_matrix": {
+        "tn": 904,
+        "fp": 0,
+        "fn": 14,
+        "tp": 114,
+        "raw": [
+          [
+            904,
+            0
+          ],
+          [
+            14,
+            114
+          ]
+        ]
+      },
+      "report_dict": {
+        "ham": {
+          "precision": 0.9847494553376906,
+          "recall": 1.0,
+          "f1-score": 0.9923161361141603,
+          "support": 904.0
+        },
+        "spam": {
+          "precision": 1.0,
+          "recall": 0.890625,
+          "f1-score": 0.9421487603305785,
+          "support": 128.0
+        },
+        "accuracy": 0.9864341085271318,
+        "macro avg": {
+          "precision": 0.9923747276688453,
+          "recall": 0.9453125,
+          "f1-score": 0.9672324482223693,
+          "support": 1032.0
+        },
+        "weighted avg": {
+          "precision": 0.9866409957609228,
+          "recall": 0.9864341085271318,
+          "f1-score": 0.9860938259394525,
+          "support": 1032.0
+        }
+      },
+      "report_text": "              precision    recall  f1-score   support\n\n         ham       0.98      1.00      0.99       904\n        spam       1.00      0.89      0.94       128\n\n    accuracy                           0.99      1032\n   macro avg       0.99      0.95      0.97      1032\nweighted avg       0.99      0.99      0.99      1032\n",
+      "pedagogical_insights": {
+        "false_positive_explanation": "A False Positive (FP=0) occurs when a legitimate message (HAM) is incorrectly classified as SPAM. In real-world SMS filtering, high FP is dangerous because users may miss critical two-factor authentication (2FA) OTP codes, banking alerts, flight notifications, or emergency personal messages.",
+        "false_negative_explanation": "A False Negative (FN=14) occurs when an unwanted or malicious message (SPAM) is mistakenly classified as legitimate (HAM). While less catastrophic than losing a genuine message, a high FN rate exposes the user to fraudulent phishing links, financial scams, and nuisance advertising."
+      }
+    }
+  },
+  "comparison_table": [
+    {
+      "Model": "Multinomial Naive Bayes",
+      "Accuracy (%)": 98.35,
+      "Spam Precision (%)": 97.44,
+      "Spam Recall (%)": 89.06,
+      "Spam F1-Score (%)": 93.06,
+      "Ham F1-Score (%)": 99.07,
+      "False Positives (FP)": 3,
+      "False Negatives (FN)": 14
+    },
+    {
+      "Model": "Logistic Regression",
+      "Accuracy (%)": 98.64,
+      "Spam Precision (%)": 100.0,
+      "Spam Recall (%)": 89.06,
+      "Spam F1-Score (%)": 94.21,
+      "Ham F1-Score (%)": 99.23,
+      "False Positives (FP)": 0,
+      "False Negatives (FN)": 14
+    }
+  ],
+  "split_info": {
+    "test_size": 0.2,
+    "random_state": 42,
+    "n_train": 4128,
+    "n_test": 1032,
+    "train_spam": 514,
+    "train_ham": 3614,
+    "test_spam": 128,
+    "test_ham": 904
+  },
+  "dataset_stats": {
+    "source_file": "D:\\SMS Spam Message Detection\\data\\SMSSpamCollection",
+    "raw_messages_count": 5574,
+    "missing_messages_dropped": 0,
+    "duplicates_count": 414,
+    "final_messages_count": 5160,
+    "dropped_duplicates": true,
+    "raw_distribution": {
+      "ham": 4827,
+      "spam": 747,
+      "spam_percentage": 13.4
+    },
+    "final_distribution": {
+      "ham": 4518,
+      "spam": 642,
+      "spam_percentage": 12.44,
+      "ham_percentage": 87.56
+    }
+  }
+}

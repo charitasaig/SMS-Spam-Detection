@@ -1,0 +1,82 @@
+[
+  {
+    "test_id": "TC-01",
+    "category": "Normal Personal Message",
+    "input_text": "Hey Mom, I am on my way home from college. Do we need anything from the grocery store?",
+    "prediction": "HAM",
+    "confidence_pct": 99.54,
+    "spam_prob_pct": 0.46,
+    "ham_prob_pct": 99.54,
+    "explanation": "Classified as HAM (legitimate, 99.5% confidence). The message exhibits natural conversational syntax without aggressive unsolicited promotional markers."
+  },
+  {
+    "test_id": "TC-02",
+    "category": "Promotional SMS",
+    "input_text": "EXCLUSIVE SALE! Get 50% discount on all designer jackets this weekend only. Shop now at your nearest store or call 0800-SALE-NOW.",
+    "prediction": "HAM",
+    "confidence_pct": 59.68,
+    "spam_prob_pct": 40.32,
+    "ham_prob_pct": 59.68,
+    "explanation": "Classified as HAM (legitimate, 59.7% confidence). The message exhibits natural conversational syntax without aggressive unsolicited promotional markers."
+  },
+  {
+    "test_id": "TC-03",
+    "category": "Suspicious Link Message",
+    "input_text": "Urgent alert: Your postal package delivery could not be completed. Update your delivery address now at http://parcel-redelivery-secure.net/track?id=99281",
+    "prediction": "HAM",
+    "confidence_pct": 60.17,
+    "spam_prob_pct": 39.83,
+    "ham_prob_pct": 60.17,
+    "explanation": "Classified as HAM (legitimate, 60.2% confidence). The message exhibits natural conversational syntax without aggressive unsolicited promotional markers."
+  },
+  {
+    "test_id": "TC-04",
+    "category": "Prize / Reward SMS",
+    "input_text": "Congratulations! You have been selected as our \u00a31,000 weekly cash prize winner! Text CLAIM to 87012 or call 09061743811 to redeem.",
+    "prediction": "SPAM",
+    "confidence_pct": 99.92,
+    "spam_prob_pct": 99.92,
+    "ham_prob_pct": 0.08,
+    "explanation": "Classified as SPAM (99.9% confidence) because the message contains monetary/currency references or cash promises, contains numeric call-back codes or phone numbers, contains multiple urgent exclamation marks."
+  },
+  {
+    "test_id": "TC-05",
+    "category": "Ordinary Bank Notification",
+    "input_text": "Your checking account ending in 8419 was debited for $24.50 at Corner Cafe on 10/14. Available balance: $1,280.12. If unauthorized, reply HELP.",
+    "prediction": "SPAM",
+    "confidence_pct": 66.87,
+    "spam_prob_pct": 66.87,
+    "ham_prob_pct": 33.13,
+    "explanation": "Classified as SPAM (66.9% confidence) because the message contains monetary/currency references or cash promises."
+  },
+  {
+    "test_id": "TC-06",
+    "category": "Empty Input",
+    "input_text": "    ",
+    "prediction": "INVALID",
+    "confidence_pct": 0.0,
+    "spam_prob_pct": 0.0,
+    "ham_prob_pct": 0.0,
+    "explanation": "No text content detected for analysis."
+  },
+  {
+    "test_id": "TC-07",
+    "category": "Numbers & Punctuation",
+    "input_text": "Meeting room #402, 10:30 AM tomorrow -- please bring 3 printed copies of doc #712! Thanks :)",
+    "prediction": "HAM",
+    "confidence_pct": 97.8,
+    "spam_prob_pct": 2.2,
+    "ham_prob_pct": 97.8,
+    "explanation": "Classified as HAM (legitimate, 97.8% confidence). The message exhibits natural conversational syntax without aggressive unsolicited promotional markers."
+  },
+  {
+    "test_id": "TC-08",
+    "category": "Mixed Spam & Legitimate Language",
+    "input_text": "Hey John, did you hear about that free pizza offer the university cafeteria was talking about yesterday? Sounds cool!",
+    "prediction": "HAM",
+    "confidence_pct": 93.95,
+    "spam_prob_pct": 6.05,
+    "ham_prob_pct": 93.95,
+    "explanation": "Classified as HAM (legitimate, 94.0% confidence). The message exhibits natural conversational syntax without aggressive unsolicited promotional markers."
+  }
+]
